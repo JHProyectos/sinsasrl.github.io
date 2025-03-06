@@ -60,6 +60,21 @@ header .container {
   align-items: center;
 }
 
+.logo {
+  display: flex;
+  flex-direction: column; /* Logo arriba, texto abajo */
+  align-items: center; /* Centrado horizontal */
+}
+
+.logo img {
+  width: 100%; /* Esto asegura que el logo respete el contenedor */
+  max-width: 200px; /* Tamaño base (ajustá según tu logo original) */
+  height: auto; /* Mantiene las proporciones */
+  transform: scale(0.5); /* Reduce al 50% del tamaño original */
+  transform-origin: center; /* Escala desde el centro */
+  margin-bottom: 5px; /* Espacio entre logo y texto, si usás Opción 2 */
+}
+
 .logo h1 {
   color: var(--primary);
   font-size: 1.8rem;
