@@ -67,8 +67,8 @@ header .container {
 }
 
 .logo img {
- /* width: 100%; /* Esto asegura que el logo respete el contenedor */
-  max-width: 300px; /* Tamaño base (ajustá según tu logo original) */
+  width: 80%; /* Esto asegura que el logo respete el contenedor */
+  max-width: 200px; /* Tamaño base (ajustá según tu logo original) */
   height: auto; /* Mantiene las proporciones */
   transform: scale(0.8); /* Reduce al 50% del tamaño original */
   transform-origin: center; /* Escala desde el centro */
