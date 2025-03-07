@@ -148,15 +148,6 @@ header .container {
   align-items: center;
 }
 
-.logo img {
-  width: 100%; /* Esto asegura que el logo respete el contenedor */
-  max-width: 400px; /* Tamaño base (ajustá según tu logo original) */
-  height: auto; /* Mantiene las proporciones */
-  transform: scale(0.8); /* Reduce al 50% del tamaño original */
-  transform-origin: center; /* Escala desde el centro */
-  margin-bottom: 5px; /* Espacio entre logo y texto, si usás Opción 2 */
-}
-
 .logo h1 {
   color: var(--primary);
   font-size: 1.8rem;
@@ -210,10 +201,7 @@ nav ul li a.active {
 
 /* Hero section */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("https://via.placeholder.com/1920x1080?text=SINSA+Background");
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(135deg, #333333, #555555, #777777);
   color: var(--white);
   padding: 150px 0;
   text-align: center;
@@ -516,10 +504,7 @@ nav ul li a.active {
 
 /* CTA Section */
 .cta {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("https://via.placeholder.com/1920x1080?text=CTA+Background");
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(135deg, #444444, #666666);
   color: var(--white);
   text-align: center;
   padding: 100px 0;
@@ -618,10 +603,7 @@ footer {
 
 /* Página de proyectos */
 .page-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("https://via.placeholder.com/1920x1080?text=Projects+Background");
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(135deg, #333333, #555555);
   color: var(--white);
   padding: 100px 0;
   text-align: center;
