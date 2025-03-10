@@ -1567,7 +1567,7 @@ footer::before {
 .whatsapp-icon {
   width: 60px;
   height: 60px;
-  border-radius: 50%;
+  border-radius: 30%;
   transition: transform 0.3s ease;
 }
 
