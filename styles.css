@@ -1596,6 +1596,24 @@ footer::before {
   .menu-toggle {
     display: block;
   }
+  
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Para que esté por encima de otros elementos */
+    text-decoration: none;
+}
+
+.whatsapp-icon {
+    width: 60px; /* Ajustá el tamaño */
+    height: auto;
+    transition: transform 0.2s; /* Efecto al pasar el mouse */
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1); /* Efecto de agrandamiento al pasar el mouse */
+}
 
   nav {
     position: fixed;
