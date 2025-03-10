@@ -732,6 +732,15 @@ nav ul li a.active {
   z-index: 1; /* Asegurar que esté por debajo del icono */
 }
 
+.service-image {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
 .service-image::after {
   content: "";
   position: absolute;
@@ -784,7 +793,7 @@ nav ul li a.active {
 
 .service-icon {
   position: absolute;
-  top: -30px;
+  top: 15px; /* Cambiado de -30px a 15px para bajar el icono */
   right: 30px;
   width: 60px;
   height: 60px;
@@ -796,13 +805,14 @@ nav ul li a.active {
   color: var(--white);
   font-size: 1.5rem;
   box-shadow: var(--shadow);
-  z-index: 3; /* Aumentar el z-index para asegurar que esté por encima de otros elementos */
-  transform: translateY(0); /* Asegurar que no haya transformación inicial */
-  transition: transform 0.3s ease; /* Añadir transición suave */
+  z-index: 3;
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover .service-icon {
-  transform: translateY(-5px); /* Añadir un pequeño movimiento hacia arriba en hover */
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 107, 0, 0.3);
 }
 
 /* Proyectos */
@@ -1588,7 +1598,6 @@ footer::before {
 .whatsapp-icon {
   width: 60px;
   height: 60px;
-  border-radius: 50%;
   transition: transform 0.3s ease;
 }
 
@@ -1706,4 +1715,3 @@ footer::before {
     gap: 30px;
   }
 }
-
