@@ -626,15 +626,17 @@ nav ul li a.active {
   padding: 40px;
   border-radius: 15px;
   box-shadow: var(--shadow-card);
-  transition: var(--transition);
+  transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
   border-left: 5px solid var(--primary);
+  transform-origin: center;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
 }
 
 .mission-card:hover,
 .vision-card:hover {
-  transform: translateY(-15px);
+  transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) translateY(-10px);
   box-shadow: var(--shadow-strong);
 }
 
@@ -674,6 +676,12 @@ nav ul li a.active {
   color: var(--primary);
   margin-bottom: 20px;
   opacity: 0.8;
+  transition: transform 0.3s ease;
+}
+
+.mission-card:hover .mission-icon,
+.vision-card:hover .vision-icon {
+  transform: scale(1.1) rotate(5deg);
 }
 
 /* Servicios */
@@ -721,6 +729,7 @@ nav ul li a.active {
   height: 220px;
   overflow: hidden;
   position: relative;
+  z-index: 1; /* Asegurar que esté por debajo del icono */
 }
 
 .service-image::after {
@@ -787,7 +796,13 @@ nav ul li a.active {
   color: var(--white);
   font-size: 1.5rem;
   box-shadow: var(--shadow);
-  z-index: 2;
+  z-index: 3; /* Aumentar el z-index para asegurar que esté por encima de otros elementos */
+  transform: translateY(0); /* Asegurar que no haya transformación inicial */
+  transition: transform 0.3s ease; /* Añadir transición suave */
+}
+
+.service-card:hover .service-icon {
+  transform: translateY(-5px); /* Añadir un pequeño movimiento hacia arriba en hover */
 }
 
 /* Proyectos */
@@ -1135,6 +1150,12 @@ nav ul li a.active {
   left: 0;
   width: 100%;
   height: 100px;
+  background-color: var(--white);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+}
+
+/* Footer */
+footer {
   background-color: var(--white);
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
 }
@@ -1567,6 +1588,7 @@ footer::before {
 .whatsapp-icon {
   width: 60px;
   height: 60px;
+  border-radius: 50%;
   transition: transform 0.3s ease;
 }
 
@@ -1684,3 +1706,4 @@ footer::before {
     gap: 30px;
   }
 }
+
